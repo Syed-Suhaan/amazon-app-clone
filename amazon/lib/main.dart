@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nike/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +9,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false ,
-      home: HomePage(),
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        
+        appBar: AppBar(
+          title: const Text("Hello"),
+        ),
+        body: const Center(
+          child: Text("Amazon"),
+        ),
+      ),
       title: "Shop",
-      
     );
   }
 }
